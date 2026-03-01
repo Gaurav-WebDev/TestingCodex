@@ -1,173 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youth Wellbeing Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="nav container">
-        <p class="logo">Youth Wellbeing Hub</p>
-        <a href="#help" class="btn btn-outline">Get Support</a>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindBloom – Mental Fitness for Young Minds</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-      <div class="hero-content container">
-        <p class="tag">For students, Gen Z & young adults</p>
-        <h1>
-          A safe place to manage anxiety, depression, stress, burnout, loneliness,
-          and everyday life pressure.
-        </h1>
-        <p>
-          You are not broken. You are human. This platform gives practical
-          tools, peer-safe guidance, and quick pathways to trusted support.
-        </p>
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">🌱</span>
+        <span class="logo-text">MindBloom</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#stress">Stress Relief</a></li>
+        <li><a href="#habits">Habits</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact" class="nav-cta">Get Support</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">✨ Mental Wellness for Ages 16–30</span>
+        <h1 class="hero-headline">Strengthen Your Mind,<br /><span class="gradient-text">Transform Your Life</span></h1>
+        <p class="hero-subtitle">MindBloom is your safe space to build mental resilience, reduce stress, and grow into the best version of yourself — one breath at a time.</p>
         <div class="hero-actions">
-          <a href="#toolkit" class="btn">Start Your 2-Minute Reset</a>
-          <a href="#planner" class="btn btn-outline">Build My Action Plan</a>
+          <a href="#tools" class="btn btn-primary">Start Your Mental Fitness Journey</a>
+          <a href="#about" class="btn btn-ghost">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>10K+</strong>
+            <span>Young Minds Helped</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>50+</strong>
+            <span>Wellness Techniques</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>Free</strong>
+            <span>Always & Forever</span>
+          </div>
         </div>
       </div>
-    </header>
-
-    <main>
-      <section class="section container" id="challenges">
-        <h2>Modern challenges youth face</h2>
-        <div class="cards three-col">
-          <article class="card">
-            <h3>Study overload & exam stress</h3>
-            <p>
-              Pressure to perform, fear of failure, poor sleep cycles, and
-              constant deadlines can push your mind into survival mode.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Social media comparison</h3>
-            <p>
-              Scrolling can make life look perfect for everyone else and leave
-              you feeling behind, disconnected, or not enough.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Loneliness & identity pressure</h3>
-            <p>
-              Navigating friendships, family expectations, career confusion, and
-              self-worth can feel overwhelming at any age.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="toolkit">
-        <div class="container">
-          <h2>Daily wellbeing toolkit</h2>
-          <p class="section-intro">
-            Choose one tool now. Small actions, repeated daily, can reduce
-            anxiety and improve emotional resilience.
-          </p>
-
-          <div class="cards three-col">
-            <article class="card tool">
-              <h3>60-second grounding</h3>
-              <p>
-                Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, and
-                1 you taste. This helps calm racing thoughts.
-              </p>
-            </article>
-            <article class="card tool">
-              <h3>Breathing reset</h3>
-              <p>
-                Inhale for 4 seconds, hold for 4 seconds, exhale for 6 seconds.
-                Repeat for one minute.
-              </p>
-              <button id="breathingBtn" class="btn btn-small" type="button">
-                Start 60s Breathing Timer
-              </button>
-              <p id="breathingStatus" class="status">Ready when you are.</p>
-            </article>
-            <article class="card tool">
-              <h3>Mood check-in</h3>
-              <p>
-                Track your current mood so you can notice patterns and ask for
-                support earlier.
-              </p>
-              <form id="moodForm" class="mood-form">
-                <label for="moodSelect">How are you feeling right now?</label>
-                <select id="moodSelect" required>
-                  <option value="">Select mood</option>
-                  <option>Calm</option>
-                  <option>Okay</option>
-                  <option>Stressed</option>
-                  <option>Anxious</option>
-                  <option>Low</option>
-                  <option>Overwhelmed</option>
-                </select>
-                <button class="btn btn-small" type="submit">Save mood</button>
-              </form>
-              <ul id="moodList" class="mood-list" aria-live="polite"></ul>
-            </article>
+      <div class="hero-illustration">
+        <div class="hero-circle">
+          <div class="circle-inner">
+            <div class="hero-emoji-grid">
+              <span class="emoji-float e1">🧘</span>
+              <span class="emoji-float e2">💚</span>
+              <span class="emoji-float e3">🌸</span>
+              <span class="emoji-float e4">✨</span>
+              <span class="emoji-float e5">🌿</span>
+              <span class="emoji-float e6">💙</span>
+            </div>
+            <div class="hero-icon-main">🧠</div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
 
-      <section class="section container" id="planner">
-        <h2>My 7-day recovery action plan</h2>
-        <p class="section-intro">
-          Pick realistic goals that protect your mental health this week.
-        </p>
-        <form id="planForm" class="plan-form">
-          <div>
-            <label for="sleep">Sleep target</label>
-            <input id="sleep" placeholder="Example: Sleep by 11:30 PM" required />
+  <!-- ========== ABOUT MENTAL FITNESS ========== -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Understanding Wellness</span>
+        <h2>What is <span class="gradient-text">Mental Fitness</span>?</h2>
+        <p class="section-desc">Mental fitness is the ability to maintain a positive, healthy mindset and emotional balance — especially in the face of today's unique pressures.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p>Just like physical fitness keeps your body strong, <strong>mental fitness keeps your mind resilient</strong>. For young people aged 16–30, this has never been more important. You're navigating a world of academic pressure, career uncertainty, social media comparison, and rapid change.</p>
+          <p>Mental fitness isn't about being happy all the time — it's about having the tools and strength to handle life's challenges with clarity, compassion, and confidence.</p>
+          <div class="challenge-list">
+            <div class="challenge-item">
+              <span class="challenge-icon">📚</span>
+              <div>
+                <strong>Academic Pressure</strong>
+                <p>Exams, deadlines, and the fear of failure affect millions of students.</p>
+              </div>
+            </div>
+            <div class="challenge-item">
+              <span class="challenge-icon">📱</span>
+              <div>
+                <strong>Social Media Pressure</strong>
+                <p>Constant comparison and curated highlight reels damage self-esteem.</p>
+              </div>
+            </div>
+            <div class="challenge-item">
+              <span class="challenge-icon">💼</span>
+              <div>
+                <strong>Career Anxiety</strong>
+                <p>Uncertainty about the future creates chronic stress and self-doubt.</p>
+              </div>
+            </div>
+            <div class="challenge-item">
+              <span class="challenge-icon">🤝</span>
+              <div>
+                <strong>Social Isolation</strong>
+                <p>Loneliness and disconnection are growing challenges for young adults.</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="movement">Movement target</label>
-            <input id="movement" placeholder="Example: 20 min walk daily" required />
+        </div>
+        <div class="about-visual fade-up">
+          <div class="pillar-card">
+            <h3>The 4 Pillars of Mental Fitness</h3>
+            <div class="pillars">
+              <div class="pillar">
+                <div class="pillar-icon">🧘</div>
+                <strong>Mindfulness</strong>
+                <span>Being present</span>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">💪</div>
+                <strong>Resilience</strong>
+                <span>Bouncing back</span>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">❤️</div>
+                <strong>Self-Compassion</strong>
+                <span>Being kind to yourself</span>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">🌟</div>
+                <strong>Purpose</strong>
+                <span>Finding your why</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="focus">Study focus target</label>
-            <input id="focus" placeholder="Example: 2 distraction-free study blocks" required />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DAILY TOOLS ========== -->
+  <section class="tools section-padding bg-soft" id="tools">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Interactive Tools</span>
+        <h2>Daily <span class="gradient-text">Mental Fitness Tools</span></h2>
+        <p class="section-desc">Simple, powerful tools designed for your daily mental wellness practice.</p>
+      </div>
+      <div class="tools-grid">
+
+        <!-- Breathing Exercise -->
+        <div class="tool-card fade-up" id="breathing-card">
+          <div class="tool-icon">🫁</div>
+          <h3>Guided Breathing</h3>
+          <p>Calm your nervous system with structured breathing exercises designed to reduce stress instantly.</p>
+          <div class="breathing-exercise" id="breathing-exercise" style="display:none;">
+            <div class="breath-circle" id="breath-circle">
+              <span id="breath-text">Breathe In</span>
+            </div>
+            <p id="breath-instruction" class="breath-instruction">Follow the circle</p>
+            <button class="btn btn-small" id="stop-breathing">Stop</button>
           </div>
-          <div>
-            <label for="connection">Connection target</label>
-            <input id="connection" placeholder="Example: Call one trusted friend" required />
+          <button class="btn btn-tool" id="start-breathing">Start Breathing Exercise</button>
+        </div>
+
+        <!-- Meditation Timer -->
+        <div class="tool-card fade-up" id="meditation-card">
+          <div class="tool-icon">⏱️</div>
+          <h3>Meditation Timer</h3>
+          <p>Set a peaceful meditation session. Focus on your breath while gentle tones guide your practice.</p>
+          <div class="meditation-timer" id="meditation-tool" style="display:none;">
+            <div class="timer-display" id="timer-display">05:00</div>
+            <div class="timer-controls">
+              <button class="btn btn-small" id="timer-minus">–1 min</button>
+              <button class="btn btn-small btn-primary" id="timer-start">Start</button>
+              <button class="btn btn-small" id="timer-plus">+1 min</button>
+            </div>
+            <button class="btn btn-small" id="stop-meditation">Close</button>
           </div>
-          <button class="btn" type="submit">Generate my plan</button>
+          <button class="btn btn-tool" id="open-meditation">Open Timer</button>
+        </div>
+
+        <!-- Affirmations -->
+        <div class="tool-card fade-up">
+          <div class="tool-icon">💬</div>
+          <h3>Daily Affirmations</h3>
+          <p>Start your day with powerful positive statements that reshape your mindset and boost confidence.</p>
+          <div class="affirmation-box" id="affirmation-box">
+            <p id="affirmation-text" class="affirmation-text">"I am capable of achieving great things."</p>
+          </div>
+          <button class="btn btn-tool" id="new-affirmation">New Affirmation</button>
+        </div>
+
+        <!-- Mood Tracker -->
+        <div class="tool-card fade-up">
+          <div class="tool-icon">🌈</div>
+          <h3>Mood Tracker</h3>
+          <p>Check in with yourself daily. Understanding your emotions is the first step to managing them.</p>
+          <div class="mood-tracker" id="mood-tracker">
+            <p class="mood-question">How are you feeling right now?</p>
+            <div class="mood-options">
+              <button class="mood-btn" data-mood="😄" data-label="Great">😄</button>
+              <button class="mood-btn" data-mood="🙂" data-label="Good">🙂</button>
+              <button class="mood-btn" data-mood="😐" data-label="Okay">😐</button>
+              <button class="mood-btn" data-mood="😔" data-label="Low">😔</button>
+              <button class="mood-btn" data-mood="😰" data-label="Anxious">😰</button>
+            </div>
+            <p class="mood-result" id="mood-result"></p>
+          </div>
+        </div>
+
+        <!-- Gratitude Journal -->
+        <div class="tool-card fade-up">
+          <div class="tool-icon">📔</div>
+          <h3>Gratitude Journal</h3>
+          <p>Write three things you're grateful for today. Gratitude rewires your brain toward positivity.</p>
+          <div class="gratitude-journal" id="gratitude-journal">
+            <input type="text" class="gratitude-input" id="gratitude-input" placeholder="I am grateful for..." maxlength="100" />
+            <button class="btn btn-small btn-primary" id="add-gratitude">Add</button>
+            <ul class="gratitude-list" id="gratitude-list"></ul>
+          </div>
+        </div>
+
+        <!-- Motivational Quote -->
+        <div class="tool-card fade-up">
+          <div class="tool-icon">⭐</div>
+          <h3>Daily Quote</h3>
+          <p>A fresh motivational quote to inspire your day and fuel your mental fitness journey.</p>
+          <div class="quote-box">
+            <p id="daily-quote-tool" class="quote-text-tool">"Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change."</p>
+          </div>
+          <button class="btn btn-tool" id="new-quote-tool">New Quote</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STRESS MANAGEMENT ========== -->
+  <section class="stress section-padding" id="stress">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Stress Relief</span>
+        <h2>Stress Management <span class="gradient-text">Techniques</span></h2>
+        <p class="section-desc">Practical, science-backed strategies you can use right now to feel calmer and more in control.</p>
+      </div>
+      <div class="stress-grid">
+        <div class="stress-card fade-up">
+          <div class="stress-number">01</div>
+          <div class="stress-icon">🌬️</div>
+          <h3>5-Minute Breathing</h3>
+          <p>The 4-7-8 technique: inhale for 4 seconds, hold for 7, exhale for 8. This pattern activates your parasympathetic nervous system, instantly reducing stress hormones.</p>
+          <div class="stress-steps">
+            <span>Inhale 4s</span>
+            <span>→</span>
+            <span>Hold 7s</span>
+            <span>→</span>
+            <span>Exhale 8s</span>
+          </div>
+        </div>
+        <div class="stress-card fade-up">
+          <div class="stress-number">02</div>
+          <div class="stress-icon">✍️</div>
+          <h3>Journaling for Clarity</h3>
+          <p>Write freely for 10 minutes without judgment. Expressive writing helps process difficult emotions, reduces anxiety, and provides mental clarity when you feel overwhelmed.</p>
+          <div class="stress-tips">
+            <span>📝 Brain dump your thoughts</span>
+            <span>💡 Identify triggers</span>
+            <span>🌟 Focus on solutions</span>
+          </div>
+        </div>
+        <div class="stress-card fade-up">
+          <div class="stress-number">03</div>
+          <div class="stress-icon">📵</div>
+          <h3>Digital Detox</h3>
+          <p>Constant connectivity amplifies stress and anxiety. A regular digital detox — even 1-2 hours daily — restores focus, improves sleep, and reduces comparison anxiety.</p>
+          <div class="stress-tips">
+            <span>📵 Phone-free mornings</span>
+            <span>🌙 No screens 1hr before bed</span>
+            <span>🌿 Nature walks instead</span>
+          </div>
+        </div>
+        <div class="stress-card fade-up">
+          <div class="stress-number">04</div>
+          <div class="stress-icon">🧘</div>
+          <h3>Mindfulness Practices</h3>
+          <p>Ground yourself using the 5-4-3-2-1 technique: notice 5 things you see, 4 you can touch, 3 you hear, 2 you smell, and 1 you taste. Instantly anchors you to the present.</p>
+          <div class="stress-tips">
+            <span>👁️ 5 things you see</span>
+            <span>✋ 4 you can touch</span>
+            <span>👂 3 you hear</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HABITS ========== -->
+  <section class="habits section-padding bg-soft" id="habits">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Build Better Habits</span>
+        <h2>Habits That <span class="gradient-text">Transform</span> Your Mental Health</h2>
+        <p class="section-desc">Small, consistent actions compound into extraordinary mental wellbeing over time.</p>
+      </div>
+      <div class="habits-grid">
+        <div class="habit-card fade-up">
+          <div class="habit-emoji">😴</div>
+          <h3>Regular Sleep Schedule</h3>
+          <p>Sleep is the foundation of mental health. Aim for 7–9 hours at consistent times. Quality sleep regulates emotions, improves focus, and reduces anxiety.</p>
+          <div class="habit-goal">
+            <span class="goal-label">Daily Goal</span>
+            <span class="goal-value">7–9 hours</span>
+          </div>
+        </div>
+        <div class="habit-card fade-up">
+          <div class="habit-emoji">🏃</div>
+          <h3>Regular Exercise</h3>
+          <p>Just 30 minutes of movement daily releases endorphins — your brain's natural mood boosters. Exercise reduces cortisol and is one of the best antidepressants known.</p>
+          <div class="habit-goal">
+            <span class="goal-label">Daily Goal</span>
+            <span class="goal-value">30 minutes</span>
+          </div>
+        </div>
+        <div class="habit-card fade-up">
+          <div class="habit-emoji">💭</div>
+          <h3>Positive Thinking</h3>
+          <p>Practice cognitive reframing — challenge negative thoughts with evidence-based alternatives. Gratitude practices, affirmations, and mindfulness all strengthen positive neural pathways.</p>
+          <div class="habit-goal">
+            <span class="goal-label">Daily Goal</span>
+            <span class="goal-value">3 positive thoughts</span>
+          </div>
+        </div>
+        <div class="habit-card fade-up">
+          <div class="habit-emoji">👥</div>
+          <h3>Social Connection</h3>
+          <p>Humans are wired for connection. Meaningful relationships — even one deep conversation daily — protect mental health, build resilience, and reduce feelings of isolation.</p>
+          <div class="habit-goal">
+            <span class="goal-label">Daily Goal</span>
+            <span class="goal-value">1 meaningful chat</span>
+          </div>
+        </div>
+        <div class="habit-card fade-up">
+          <div class="habit-emoji">📵</div>
+          <h3>Limit Social Media</h3>
+          <p>Set intentional time limits on social platforms. Replace doom-scrolling with purposeful reading, creative hobbies, or quality time with people you care about.</p>
+          <div class="habit-goal">
+            <span class="goal-label">Daily Limit</span>
+            <span class="goal-value">Max 1–2 hours</span>
+          </div>
+        </div>
+        <div class="habit-card fade-up">
+          <div class="habit-emoji">🥗</div>
+          <h3>Nourish Your Body</h3>
+          <p>Your gut is your second brain. A balanced diet rich in omega-3s, antioxidants, and whole foods directly improves mood, energy levels, and cognitive function.</p>
+          <div class="habit-goal">
+            <span class="goal-label">Daily Goal</span>
+            <span class="goal-value">Balanced meals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SUCCESS STORIES ========== -->
+  <section class="stories section-padding" id="stories">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Real Stories</span>
+        <h2>Youth <span class="gradient-text">Success Stories</span></h2>
+        <p class="section-desc">Real experiences from young people who transformed their mental health with MindBloom.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card fade-up">
+          <div class="story-quote">"</div>
+          <p class="story-text">I used to have panic attacks before every exam. The breathing exercises and daily affirmations from MindBloom helped me manage my anxiety. I just aced my final year exams!</p>
+          <div class="story-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <strong>Aanya Sharma</strong>
+              <span>Engineering Student, 22</span>
+            </div>
+            <div class="story-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="story-card fade-up">
+          <div class="story-quote">"</div>
+          <p class="story-text">After losing my job, I spiraled into depression. The gratitude journal and habit tracker kept me grounded. Three months later, I launched my own startup. MindBloom changed my life.</p>
+          <div class="story-author">
+            <div class="author-avatar" style="background: var(--lavender);">R</div>
+            <div class="author-info">
+              <strong>Rahul Mehta</strong>
+              <span>Entrepreneur, 27</span>
+            </div>
+            <div class="story-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="story-card fade-up">
+          <div class="story-quote">"</div>
+          <p class="story-text">Social media was destroying my self-esteem. The digital detox guidance and mood tracker helped me understand my triggers. I feel so much lighter and more confident now.</p>
+          <div class="story-author">
+            <div class="author-avatar" style="background: var(--soft-green);">P</div>
+            <div class="author-info">
+              <strong>Priya Nair</strong>
+              <span>Content Creator, 24</span>
+            </div>
+            <div class="story-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="story-card fade-up">
+          <div class="story-quote">"</div>
+          <p class="story-text">Moving to a new city for work was incredibly lonely. MindBloom's resources helped me build healthy routines and find my community. I no longer feel like I'm going through it alone.</p>
+          <div class="story-author">
+            <div class="author-avatar" style="background: #c7d2fe;">K</div>
+            <div class="author-info">
+              <strong>Karan Singh</strong>
+              <span>Software Developer, 25</span>
+            </div>
+            <div class="story-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESOURCE LIBRARY ========== -->
+  <section class="resources section-padding bg-soft" id="resources">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Knowledge Hub</span>
+        <h2>Resource <span class="gradient-text">Library</span></h2>
+        <p class="section-desc">Curated articles, guides, and tips to deepen your mental wellness knowledge.</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card fade-up">
+          <div class="resource-type article">Article</div>
+          <div class="resource-emoji">🧠</div>
+          <h3>Understanding Anxiety in Young Adults</h3>
+          <p>A comprehensive guide to recognizing anxiety symptoms, understanding their root causes, and learning evidence-based coping strategies for daily life.</p>
+          <div class="resource-meta">
+            <span>📖 8 min read</span>
+            <a href="#" class="resource-link">Read More →</a>
+          </div>
+        </div>
+        <div class="resource-card fade-up">
+          <div class="resource-type guide">Guide</div>
+          <div class="resource-emoji">😴</div>
+          <h3>The Ultimate Sleep Hygiene Guide</h3>
+          <p>Sleep is your mental health superpower. This guide covers everything from optimizing your sleep environment to creating a wind-down routine that actually works.</p>
+          <div class="resource-meta">
+            <span>📖 6 min read</span>
+            <a href="#" class="resource-link">Read More →</a>
+          </div>
+        </div>
+        <div class="resource-card fade-up">
+          <div class="resource-type tip">Tips</div>
+          <div class="resource-emoji">📱</div>
+          <h3>Breaking Free from Doomscrolling</h3>
+          <p>Practical strategies to reclaim your attention, set healthy digital boundaries, and use technology intentionally rather than compulsively.</p>
+          <div class="resource-meta">
+            <span>📖 5 min read</span>
+            <a href="#" class="resource-link">Read More →</a>
+          </div>
+        </div>
+        <div class="resource-card fade-up">
+          <div class="resource-type article">Article</div>
+          <div class="resource-emoji">🤝</div>
+          <h3>How to Build Meaningful Relationships</h3>
+          <p>Deep, authentic connections are central to mental wellbeing. Learn how to cultivate genuine friendships and navigate social anxiety in the modern age.</p>
+          <div class="resource-meta">
+            <span>📖 7 min read</span>
+            <a href="#" class="resource-link">Read More →</a>
+          </div>
+        </div>
+        <div class="resource-card fade-up">
+          <div class="resource-type guide">Guide</div>
+          <div class="resource-emoji">🎯</div>
+          <h3>Setting Goals That Fuel Wellbeing</h3>
+          <p>Learn to set SMART goals aligned with your values, not just external pressures. Goals rooted in purpose create sustainable motivation and joy.</p>
+          <div class="resource-meta">
+            <span>📖 5 min read</span>
+            <a href="#" class="resource-link">Read More →</a>
+          </div>
+        </div>
+        <div class="resource-card fade-up">
+          <div class="resource-type tip">Tips</div>
+          <div class="resource-emoji">🌿</div>
+          <h3>15 Micro-Habits for a Calmer Mind</h3>
+          <p>Small daily rituals that take under 5 minutes but create a significant cumulative impact on your mental clarity, emotional balance, and overall happiness.</p>
+          <div class="resource-meta">
+            <span>📖 4 min read</span>
+            <a href="#" class="resource-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DAILY MOTIVATION ========== -->
+  <section class="motivation section-padding" id="motivation">
+    <div class="container">
+      <div class="motivation-card fade-up">
+        <div class="motivation-header">
+          <span class="section-tag">Daily Inspiration</span>
+          <h2>Today's <span class="gradient-text">Motivation</span></h2>
+        </div>
+        <div class="quote-display">
+          <div class="quote-marks">"</div>
+          <p id="daily-quote" class="daily-quote-text">Loading your inspiration...</p>
+          <p id="quote-author" class="quote-author">— MindBloom</p>
+        </div>
+        <button class="btn btn-primary" id="new-quote">✨ Get New Quote</button>
+        <div class="motivation-decorations">
+          <span class="deco d1">🌸</span>
+          <span class="deco d2">⭐</span>
+          <span class="deco d3">🌿</span>
+          <span class="deco d4">💙</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact section-padding bg-soft" id="contact">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">We're Here For You</span>
+        <h2>Reach Out for <span class="gradient-text">Support</span></h2>
+        <p class="section-desc">You don't have to face it alone. Send us a message and our wellness team will respond within 24 hours.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info fade-up">
+          <div class="contact-item">
+            <span class="contact-icon">💬</span>
+            <div>
+              <strong>Live Chat Support</strong>
+              <p>Available Mon–Fri, 9am–6pm IST</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email Us</strong>
+              <p>support@mindbloom.in</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🆘</span>
+            <div>
+              <strong>Crisis Support</strong>
+              <p>iCall: 9152987821<br />Vandrevala Foundation: 1860-2662-345</p>
+            </div>
+          </div>
+          <div class="helpline-note">
+            <p>⚠️ If you are in immediate danger, please call <strong>112</strong> or your local emergency services.</p>
+          </div>
+        </div>
+        <form class="contact-form fade-up" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name" />
+            <span class="field-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email" />
+            <span class="field-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Share what's on your mind..." required></textarea>
+            <span class="field-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message 💚</button>
+          <div class="form-success" id="form-success" style="display:none;">
+            <span>✅</span>
+            <p>Thank you! Your message has been received. We'll get back to you within 24 hours.</p>
+          </div>
         </form>
+      </div>
+    </div>
+  </section>
 
-        <article id="planOutput" class="card hidden" aria-live="polite"></article>
-      </section>
-
-      <section class="section section-alert" id="help">
-        <div class="container alert-content">
-          <h2>Need urgent help right now?</h2>
-          <p>
-            If you are in danger, have thoughts of self-harm, or feel unsafe,
-            contact local emergency services immediately.
-          </p>
-          <ul>
-            <li>Call your local emergency number now.</li>
-            <li>Reach out to a trusted adult, counselor, or campus wellbeing team.</li>
-            <li>Use your country's 24/7 suicide & crisis lifeline.</li>
-          </ul>
-          <p class="note">
-            This website is supportive but not a replacement for licensed
-            medical or psychological care.
-          </p>
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">🌱 MindBloom</a>
+          <p>Empowering young minds to thrive. Mental fitness tools, resources, and community for ages 16–30.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
         </div>
-      </section>
-    </main>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Mental Fitness</a></li>
+            <li><a href="#tools">Daily Tools</a></li>
+            <li><a href="#stress">Stress Management</a></li>
+            <li><a href="#habits">Healthy Habits</a></li>
+            <li><a href="#resources">Resource Library</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#stories">Success Stories</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-helplines">
+          <h4>Mental Health Helplines 🆘</h4>
+          <div class="helpline">
+            <strong>iCall (India)</strong>
+            <a href="tel:9152987821">9152987821</a>
+          </div>
+          <div class="helpline">
+            <strong>Vandrevala Foundation</strong>
+            <a href="tel:18602662345">1860-2662-345</a>
+          </div>
+          <div class="helpline">
+            <strong>NIMHANS</strong>
+            <a href="tel:080-46110007">080-46110007</a>
+          </div>
+          <div class="helpline">
+            <strong>Snehi (Suicide Prevention)</strong>
+            <a href="tel:044-24640050">044-24640050</a>
+          </div>
+          <p class="helpline-note">These helplines are available 24/7 for free, confidential support.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 MindBloom. Made with 💚 for young minds everywhere. You are not alone.</p>
+        <p class="footer-tagline">🌱 Grow your mind, bloom your life.</p>
+      </div>
+    </div>
+  </footer>
 
-    <footer class="footer">
-      <p>Made with care for youth mental health awareness and recovery.</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
