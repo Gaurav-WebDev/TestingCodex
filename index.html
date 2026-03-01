@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youth Wellbeing Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <p class="logo">Youth Wellbeing Hub</p>
+        <a href="#help" class="btn btn-outline">Get Support</a>
+      </nav>
+
+      <div class="hero-content container">
+        <p class="tag">For students, Gen Z & young adults</p>
+        <h1>
+          A safe place to manage anxiety, depression, stress, burnout, loneliness,
+          and everyday life pressure.
+        </h1>
+        <p>
+          You are not broken. You are human. This platform gives practical
+          tools, peer-safe guidance, and quick pathways to trusted support.
+        </p>
+        <div class="hero-actions">
+          <a href="#toolkit" class="btn">Start Your 2-Minute Reset</a>
+          <a href="#planner" class="btn btn-outline">Build My Action Plan</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container" id="challenges">
+        <h2>Modern challenges youth face</h2>
+        <div class="cards three-col">
+          <article class="card">
+            <h3>Study overload & exam stress</h3>
+            <p>
+              Pressure to perform, fear of failure, poor sleep cycles, and
+              constant deadlines can push your mind into survival mode.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Social media comparison</h3>
+            <p>
+              Scrolling can make life look perfect for everyone else and leave
+              you feeling behind, disconnected, or not enough.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Loneliness & identity pressure</h3>
+            <p>
+              Navigating friendships, family expectations, career confusion, and
+              self-worth can feel overwhelming at any age.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="toolkit">
+        <div class="container">
+          <h2>Daily wellbeing toolkit</h2>
+          <p class="section-intro">
+            Choose one tool now. Small actions, repeated daily, can reduce
+            anxiety and improve emotional resilience.
+          </p>
+
+          <div class="cards three-col">
+            <article class="card tool">
+              <h3>60-second grounding</h3>
+              <p>
+                Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, and
+                1 you taste. This helps calm racing thoughts.
+              </p>
+            </article>
+            <article class="card tool">
+              <h3>Breathing reset</h3>
+              <p>
+                Inhale for 4 seconds, hold for 4 seconds, exhale for 6 seconds.
+                Repeat for one minute.
+              </p>
+              <button id="breathingBtn" class="btn btn-small" type="button">
+                Start 60s Breathing Timer
+              </button>
+              <p id="breathingStatus" class="status">Ready when you are.</p>
+            </article>
+            <article class="card tool">
+              <h3>Mood check-in</h3>
+              <p>
+                Track your current mood so you can notice patterns and ask for
+                support earlier.
+              </p>
+              <form id="moodForm" class="mood-form">
+                <label for="moodSelect">How are you feeling right now?</label>
+                <select id="moodSelect" required>
+                  <option value="">Select mood</option>
+                  <option>Calm</option>
+                  <option>Okay</option>
+                  <option>Stressed</option>
+                  <option>Anxious</option>
+                  <option>Low</option>
+                  <option>Overwhelmed</option>
+                </select>
+                <button class="btn btn-small" type="submit">Save mood</button>
+              </form>
+              <ul id="moodList" class="mood-list" aria-live="polite"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="planner">
+        <h2>My 7-day recovery action plan</h2>
+        <p class="section-intro">
+          Pick realistic goals that protect your mental health this week.
+        </p>
+        <form id="planForm" class="plan-form">
+          <div>
+            <label for="sleep">Sleep target</label>
+            <input id="sleep" placeholder="Example: Sleep by 11:30 PM" required />
+          </div>
+          <div>
+            <label for="movement">Movement target</label>
+            <input id="movement" placeholder="Example: 20 min walk daily" required />
+          </div>
+          <div>
+            <label for="focus">Study focus target</label>
+            <input id="focus" placeholder="Example: 2 distraction-free study blocks" required />
+          </div>
+          <div>
+            <label for="connection">Connection target</label>
+            <input id="connection" placeholder="Example: Call one trusted friend" required />
+          </div>
+          <button class="btn" type="submit">Generate my plan</button>
+        </form>
+
+        <article id="planOutput" class="card hidden" aria-live="polite"></article>
+      </section>
+
+      <section class="section section-alert" id="help">
+        <div class="container alert-content">
+          <h2>Need urgent help right now?</h2>
+          <p>
+            If you are in danger, have thoughts of self-harm, or feel unsafe,
+            contact local emergency services immediately.
+          </p>
+          <ul>
+            <li>Call your local emergency number now.</li>
+            <li>Reach out to a trusted adult, counselor, or campus wellbeing team.</li>
+            <li>Use your country's 24/7 suicide & crisis lifeline.</li>
+          </ul>
+          <p class="note">
+            This website is supportive but not a replacement for licensed
+            medical or psychological care.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with care for youth mental health awareness and recovery.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
